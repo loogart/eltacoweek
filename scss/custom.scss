@@ -1,0 +1,52 @@
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,600,600i');
+
+// Required
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+// customize theme
+$font-family-sans-serif: 'IBM Plex Sans',
+sans-serif;
+
+// Re-define BS colors
+$yellow: #FBB040;
+$red: #DD2B45;
+$purple: #8C4160;
+$green:#00A14B;
+
+// Define new colors
+$beige:#FFF9EE;
+$burgundy:#5E1834;
+
+// Map colors
+$colors: ("yellow":#FBB040, "red":#DD2B45, "purple":#8C4160, "green":#00A14B, "beige":$beige, "burgundy":$burgundy);
+
+//Map theme-colors
+$theme-colors: ("primary": $purple, "danger":$red, "success":$green, "warning":$yellow, "dark":$burgundy, "light":$beige);
+
+// Edit default BS styles
+$body-bg: $yellow;
+
+
+// Bootstrap
+@import "../bootstrap/scss/bootstrap.scss";
+
+.deco {
+    background-image: url(../img/pattern.svg);
+    height: 32px;
+    width: 100%;
+
+    @include media-breakpoint-down(sm) {
+        height: 36px;
+    }
+}
+
+.logo {
+    width: 140px;
+
+    @include media-breakpoint-down(sm) {
+        width:80vw;
+    }
+}

@@ -1,14 +1,11 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,600,600i');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,600,700');
 
 // Required
 @import "../bootstrap/scss/functions";
 @import "../bootstrap/scss/variables";
 @import "../bootstrap/scss/mixins";
 
-// customize theme
-$font-family-sans-serif: 'IBM Plex Sans',
-sans-serif;
 
 // Re-define BS colors
 $yellow: #FBB040;
@@ -26,12 +23,37 @@ $colors: ("yellow":#FBB040, "red":#DD2B45, "purple":#8C4160, "green":#00A14B, "b
 //Map theme-colors
 $theme-colors: ("primary": $purple, "danger":$red, "success":$green, "warning":$yellow, "dark":$burgundy, "light":$beige);
 
-// Edit default BS styles
+// customize theme
 $body-bg: $yellow;
+$font-family-sans-serif: 'IBM Plex Sans',
+sans-serif;
+$headings-font-family:'IBM Plex Sans',
+sans-serif;
+$headings-color: $burgundy;
+$headings-font-weight: 700;
 
 
 // Bootstrap
 @import "../bootstrap/scss/bootstrap.scss";
+
+main{
+    padding:$spacer*2.5 0;
+}
+
+p {
+    color: $burgundy;
+    font-family: $font-family-sans-serif;
+}
+
+a {
+    color: $burgundy;
+    text-decoration: underline;
+    font-family: $font-family-sans-serif;
+
+    &:hover {
+        color: $purple;
+    }
+}
 
 .deco {
     background-image: url(../img/pattern.svg);
@@ -47,6 +69,12 @@ $body-bg: $yellow;
     width: 140px;
 
     @include media-breakpoint-down(sm) {
-        width:80vw;
+        width: 80vw;
     }
+}
+
+footer{
+    background-color: $burgundy;
+    color:white;
+    padding:$spacer*2.5;
 }

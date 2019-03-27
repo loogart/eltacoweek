@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <title>El Taco Week</title>
 </head>
@@ -16,12 +17,83 @@
     <nav>
         <div class="deco"></div>
         <div class="d-flex justify-content-center p-1 p-sm-3">
-            <img class="logo d-none d-sm-block" src="./img/ETW_logo-vertical.svg" alt="logo of El Taco Week">
-            <img class="logo d-block d-sm-none" src="./img/ETW_logo-horizontal.svg" alt="logo of El Taco Week">
+            <a href="./"><img class="logo d-none d-sm-block" src="./img/ETW_logo-vertical.svg" alt="logo of El Taco Week"></a>
+            <a href="./"><img class="logo d-block d-sm-none" src="./img/ETW_logo-horizontal.svg" alt="logo of El Taco Week"></a>
         </div>
     </nav>
 
     <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1 class="sr-only">La semaine de El Taco Week</h1>
+                    <h2>Registration is now open!</h2>
+                    <h3 class="h5 text-danger">Montreal: May 1-7, 2019</h3>
+                    <p>El Taco Week is a brand new food festival happening exclusively in the Greater Montreal Area (Montréal, Rive-Sud and Rive-Nord) from May 1 to May 7 every year.</p>
+                    <p>Be part of our first edition of El Taco Week, brought to you by the <a href="https://peoplemover.tech/" target="_blank">same people as Le Burger Week and La Poutine Week</a>.</p>
+                    <p>If you have any questions, please <a href="mailto:">contact us</a>.</p>
+                </div>
+                <div class="col-sm-6">
+                    <form>
+                        <div class="form-row">
+                            <div class="col-12 mb-3">
+                                <label for="validationDefault01">Full Name</label>
+                                <input type="text" class="form-control" id="validationDefault01" placeholder="First name and Last Name" required>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="validationDefault02">Email address</label>
+                                <input type="text" class="form-control" id="validationDefault02" placeholder="name@company.com" required>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="validationDefault03">Phone Number</label>
+                                <input type="text" class="form-control" id="validationDefault03" placeholder="(514) 123-4567" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12 mb-3">
+                                <label for="validationDefault04">Address</label>
+                                <input type="text" class="form-control" id="validationDefault04" placeholder="Number, Street Name, Suite" required>
+                            </div>
+                            <div class="col-md-5 mb-3">
+                                <label for="validationDefault05">City</label>
+                                <input type="text" class="form-control" id="validationDefault05" placeholder="City" required>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationDefault06">Province</label>
+                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <option value="1" selected>AB</option>
+                                    <option value="2">BC</option>
+                                    <option value="3">MB</option>
+                                    <option value="4">NB</option>
+                                    <option value="5">NL</option>
+                                    <option value="6">NT</option>
+                                    <option value="7">NS</option>
+                                    <option value="8">NU</option>
+                                    <option value="9">ON</option>
+                                    <option value="10">PE</option>
+                                    <option value="11">QC</option>
+                                    <option value="12">SK</option>
+                                    <option value="13">YT</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationDefault07">Postal Code</label>
+                                <input type="text" class="form-control" id="validationDefault07" placeholder="Zip" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                                <label class="form-check-label small" for="invalidCheck2">
+                                    I Agree to the People Mover Tech Inc. <a href="https://lapoutineweek.com/privacy" target="_blank">Terms and Conditions</a>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="btn btn-block btn-danger" type="submit"><i class="fas fa-lock"></i> Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 
     </main>
 

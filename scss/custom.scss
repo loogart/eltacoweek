@@ -29,15 +29,19 @@ $font-family-sans-serif: 'IBM Plex Sans',
 sans-serif;
 $headings-font-family:'IBM Plex Sans',
 sans-serif;
+$input-font-family: 'IBM Plex Sans',
+sans-serif;
 $headings-color: $burgundy;
 $headings-font-weight: 700;
-
+$input-focus-color: $burgundy;
+$input-focus-bg:$beige;
+$input-focus-border-color:#FFDEAD;
 
 // Bootstrap
 @import "../bootstrap/scss/bootstrap.scss";
 
-main{
-    padding:$spacer*2.5 0;
+main {
+    padding: $spacer*2.5 0;
 }
 
 p {
@@ -67,14 +71,101 @@ a {
 
 .logo {
     width: 140px;
+    height: auto;
 
     @include media-breakpoint-down(sm) {
         width: 80vw;
+        max-height: 200px;
     }
 }
 
-footer{
-    background-color: $burgundy;
-    color:white;
-    padding:$spacer*2.5;
+footer {
+    color: white;
+
+    a {
+        color: $yellow;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    hr {
+        border-color: white;
+    }
+
+    .top {
+        min-height: 150px;
+        background: url(../img/cactus.svg) 20% 110% no-repeat, url(../img/cactus.svg) 90% 130% no-repeat, url(../img/cactus.svg) 69% 105% no-repeat;
+        background-size: 50px, 69px, 29px;
+
+        @include media-breakpoint-down(sm) {
+            min-height: 100px;
+            background-size: 50px, 0, 29px;
+        }
+    }
+
+    .bottom {
+        padding: $spacer*2.5;
+        background-color: $burgundy;
+    }
+
+    li.list-inline-item:not(:last-child) {
+        margin-right: 2rem;
+    }
+}
+
+label {
+    color: $burgundy;
+    font-weight: $font-weight-bolder;
+    font-size: $font-size-sm;
+}
+
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: $input-height;
+    padding: $input-padding-y $input-padding-x;
+    color: $burgundy;
+    background-color: transparent;
+    border: 3px solid $burgundy;
+
+    @include border-radius($input-border-radius, 0);
+
+    // Placeholder
+    &::placeholder {
+        color: $purple;
+    }
+}
+
+select.form-control {
+    &:focus::-ms-value {
+        // Suppress the nested default white text on blue background highlight given to
+        // the selected option text when the (still closed) <select> receives focus
+        // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+        // match the appearance of the native widget.
+        // See https://github.com/twbs/bootstrap/issues/19398.
+        color: $input-color;
+        background-color: transparent;
+    }
+}
+
+.custom-select {
+    border-radius: 0 !important;
+    color: $burgundy;
+}
+
+select {
+    border-radius: 0;
+
+    &.custom-select {
+        border: 3px solid $burgundy;
+        background: transparent;
+
+        &:focus {
+            border-color: #FFDEAD;
+            background: $beige;
+        }
+    }
 }
